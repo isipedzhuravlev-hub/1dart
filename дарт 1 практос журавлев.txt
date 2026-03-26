@@ -1,0 +1,45 @@
+import 'dart:math';
+import 'dart:io';
+
+void main(List<String> arguments) {
+  print("Введите первое число: ");
+  int a = int.parse(stdin.readLineSync()!);
+
+  print("Введите второе число: ");
+  int b = int.parse(stdin.readLineSync()!);
+
+  print('Сложение: ${a + b}');
+  print('Вычитание: ${a - b}');
+  print('Умножение: ${a * b}');
+  
+  if (b != 0) {
+    print('Деление: ${a / b}');
+    print('Целочисленное деление: ${a ~/ b}');
+    print('Остаток от деления: ${a % b}');
+  } else {
+    print('Деление на ноль невозможно!');
+  }
+  
+  print('Степень: ${pow(a, b)}');
+
+  if (a == b) {
+    print('Числа равны');
+  } else if (a > b) {
+    print('Первое число больше второго');
+  } else {
+    print('Первое число меньше второго');
+  }
+
+  if (a >= b) {
+    print('Первое число больше или равно второму');
+  } else {
+    print('Первое число меньше или равно второму');
+  }
+
+  if (a > 0 && b > 0) {
+    print('Оба числа положительные');
+  }
+  if (a > 0 || b > 0) {
+    print('Хотя бы одно число положительное');
+  }
+}
